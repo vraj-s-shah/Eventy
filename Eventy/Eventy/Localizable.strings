@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Eventy
+
+  Created by Vraj Shah on 08/06/23.
+  
+*/
+
+welcomeToOnlineEventAppTitle = "Welcome to \nOnline Event App";
+findAndBookAEventTitle = "Find And \nBook A Event";
+organizedAPremiumEventTitle = "Organized \nA Premium Event";
+welcomeToOnlineEventAppDescription = "Find the Best event near you \nwith just one of best app";
+findAndBookAEventDescription = "Find the Best event near you \nwith just one of best app";
+organizedAPremiumEventDescription = "Find the Best event near you \nwith just one of best app";
+getStarted = "Get Started";
+registerByNo = "Register by No";

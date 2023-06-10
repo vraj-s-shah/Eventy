@@ -7,20 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058695C56AE428E3F8275CF3 /* Pods_Eventy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AF8BAC2FC89E7EF4A3D345 /* Pods_Eventy.framework */; };
 		B312CB8B2A31CE0C00F441C0 /* EventyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */; };
 		B312CB8D2A31CE0C00F441C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312CB8C2A31CE0C00F441C0 /* ContentView.swift */; };
 		B312CB8F2A31CE0D00F441C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */; };
 		B312CB922A31CE0D00F441C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312CB912A31CE0D00F441C0 /* Preview Assets.xcassets */; };
-		B312CB9B2A31D4D500F441C0 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B312CB9A2A31D4D500F441C0 /* RswiftLibrary */; };
+		B326117F2A3483BB009860EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326117E2A3483BB009860EC /* Constants.swift */; };
+		B330F68A2A31DEFA00552DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */; };
+		B330F68F2A31EE3600552DE9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F68E2A31EE3600552DE9 /* R.generated.swift */; };
+		B330F6912A31F0EC00552DE9 /* TutorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */; };
+		B330F6932A31F1BD00552DE9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B330F6922A31F1BD00552DE9 /* Localizable.strings */; };
+		B330F6992A3229A800552DE9 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6982A3229A800552DE9 /* RoundedCorner.swift */; };
+		B330F6A82A322CDD00552DE9 /* Roboto-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F69C2A322CDD00552DE9 /* Roboto-ThinItalic.otf */; };
+		B330F6A92A322CDD00552DE9 /* Roboto-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F69D2A322CDD00552DE9 /* Roboto-Light.otf */; };
+		B330F6AA2A322CDD00552DE9 /* Roboto-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F69E2A322CDD00552DE9 /* Roboto-BoldItalic.otf */; };
+		B330F6AB2A322CDD00552DE9 /* Roboto-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F69F2A322CDD00552DE9 /* Roboto-Italic.otf */; };
+		B330F6AC2A322CDD00552DE9 /* Roboto-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A02A322CDD00552DE9 /* Roboto-Bold.otf */; };
+		B330F6AD2A322CDD00552DE9 /* Roboto-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A12A322CDD00552DE9 /* Roboto-Regular.otf */; };
+		B330F6AE2A322CDD00552DE9 /* Roboto-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A22A322CDD00552DE9 /* Roboto-BlackItalic.otf */; };
+		B330F6AF2A322CDD00552DE9 /* Roboto-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A32A322CDD00552DE9 /* Roboto-LightItalic.otf */; };
+		B330F6B02A322CDD00552DE9 /* Roboto-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A42A322CDD00552DE9 /* Roboto-Thin.otf */; };
+		B330F6B12A322CDD00552DE9 /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A52A322CDD00552DE9 /* Roboto-Medium.otf */; };
+		B330F6B22A322CDD00552DE9 /* Roboto-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A62A322CDD00552DE9 /* Roboto-Black.otf */; };
+		B330F6B32A322CDD00552DE9 /* Roboto-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A72A322CDD00552DE9 /* Roboto-MediumItalic.otf */; };
+		B330F6B62A32329000552DE9 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6B52A32329000552DE9 /* BaseButton.swift */; };
+		B3BCBD092A3384E5008E0573 /* StrokeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCBD082A3384E5008E0573 /* StrokeButton.swift */; };
+		B3BCBD0B2A3385D3008E0573 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54AF8BAC2FC89E7EF4A3D345 /* Pods_Eventy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B312CB872A31CE0C00F441C0 /* Eventy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventyApp.swift; sourceTree = "<group>"; };
 		B312CB8C2A31CE0C00F441C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B312CB912A31CE0D00F441C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B312CB982A31D10E00F441C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B312CB982A31D10E00F441C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B326117E2A3483BB009860EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B330F68E2A31EE3600552DE9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScreen.swift; sourceTree = "<group>"; };
+		B330F6922A31F1BD00552DE9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B330F6982A3229A800552DE9 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		B330F69C2A322CDD00552DE9 /* Roboto-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.otf"; sourceTree = "<group>"; };
+		B330F69D2A322CDD00552DE9 /* Roboto-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.otf"; sourceTree = "<group>"; };
+		B330F69E2A322CDD00552DE9 /* Roboto-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.otf"; sourceTree = "<group>"; };
+		B330F69F2A322CDD00552DE9 /* Roboto-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.otf"; sourceTree = "<group>"; };
+		B330F6A02A322CDD00552DE9 /* Roboto-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.otf"; sourceTree = "<group>"; };
+		B330F6A12A322CDD00552DE9 /* Roboto-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.otf"; sourceTree = "<group>"; };
+		B330F6A22A322CDD00552DE9 /* Roboto-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.otf"; sourceTree = "<group>"; };
+		B330F6A32A322CDD00552DE9 /* Roboto-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.otf"; sourceTree = "<group>"; };
+		B330F6A42A322CDD00552DE9 /* Roboto-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.otf"; sourceTree = "<group>"; };
+		B330F6A52A322CDD00552DE9 /* Roboto-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.otf"; sourceTree = "<group>"; };
+		B330F6A62A322CDD00552DE9 /* Roboto-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.otf"; sourceTree = "<group>"; };
+		B330F6A72A322CDD00552DE9 /* Roboto-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.otf"; sourceTree = "<group>"; };
+		B330F6B52A32329000552DE9 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		B3BCBD082A3384E5008E0573 /* StrokeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeButton.swift; sourceTree = "<group>"; };
+		B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResource.swift; sourceTree = "<group>"; };
+		D328155156CE78C883827224 /* Pods-Eventy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventy.debug.xcconfig"; path = "Target Support Files/Pods-Eventy/Pods-Eventy.debug.xcconfig"; sourceTree = "<group>"; };
+		E10FD84CE45DCF1CCF16B4E4 /* Pods-Eventy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventy.release.xcconfig"; path = "Target Support Files/Pods-Eventy/Pods-Eventy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,18 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B312CB9B2A31D4D500F441C0 /* RswiftLibrary in Frameworks */,
+				058695C56AE428E3F8275CF3 /* Pods_Eventy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5D0E9CFDABDC68DB22C925 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D328155156CE78C883827224 /* Pods-Eventy.debug.xcconfig */,
+				E10FD84CE45DCF1CCF16B4E4 /* Pods-Eventy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5224A6F973F26775DFEEC2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54AF8BAC2FC89E7EF4A3D345 /* Pods_Eventy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B312CB7E2A31CE0C00F441C0 = {
 			isa = PBXGroup;
 			children = (
 				B312CB892A31CE0C00F441C0 /* Eventy */,
 				B312CB882A31CE0C00F441C0 /* Products */,
+				4C5D0E9CFDABDC68DB22C925 /* Pods */,
+				A5224A6F973F26775DFEEC2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +118,17 @@
 		B312CB892A31CE0C00F441C0 /* Eventy */ = {
 			isa = PBXGroup;
 			children = (
-				B312CB982A31D10E00F441C0 /* Info.plist */,
 				B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */,
 				B312CB8C2A31CE0C00F441C0 /* ContentView.swift */,
-				B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */,
+				B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */,
+				B330F68E2A31EE3600552DE9 /* R.generated.swift */,
+				B330F6B42A32327F00552DE9 /* Base */,
+				B330F6942A32293700552DE9 /* Utils */,
 				B312CB902A31CE0D00F441C0 /* Preview Content */,
+				B330F6922A31F1BD00552DE9 /* Localizable.strings */,
+				B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */,
+				B312CB982A31D10E00F441C0 /* Info.plist */,
+				B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */,
 			);
 			path = Eventy;
 			sourceTree = "<group>";
@@ -71,6 +141,61 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B330F6942A32293700552DE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B330F69A2A322CB700552DE9 /* Font */,
+				B330F6952A32293D00552DE9 /* Extensions */,
+				B330F6982A3229A800552DE9 /* RoundedCorner.swift */,
+				B326117E2A3483BB009860EC /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B330F6952A32293D00552DE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B330F69A2A322CB700552DE9 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B330F69B2A322CBF00552DE9 /* Roboto */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		B330F69B2A322CBF00552DE9 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				B330F6A62A322CDD00552DE9 /* Roboto-Black.otf */,
+				B330F6A22A322CDD00552DE9 /* Roboto-BlackItalic.otf */,
+				B330F6A02A322CDD00552DE9 /* Roboto-Bold.otf */,
+				B330F69E2A322CDD00552DE9 /* Roboto-BoldItalic.otf */,
+				B330F69F2A322CDD00552DE9 /* Roboto-Italic.otf */,
+				B330F69D2A322CDD00552DE9 /* Roboto-Light.otf */,
+				B330F6A32A322CDD00552DE9 /* Roboto-LightItalic.otf */,
+				B330F6A52A322CDD00552DE9 /* Roboto-Medium.otf */,
+				B330F6A72A322CDD00552DE9 /* Roboto-MediumItalic.otf */,
+				B330F6A12A322CDD00552DE9 /* Roboto-Regular.otf */,
+				B330F6A42A322CDD00552DE9 /* Roboto-Thin.otf */,
+				B330F69C2A322CDD00552DE9 /* Roboto-ThinItalic.otf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		B330F6B42A32327F00552DE9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B330F6B52A32329000552DE9 /* BaseButton.swift */,
+				B3BCBD082A3384E5008E0573 /* StrokeButton.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,18 +203,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B312CB952A31CE0D00F441C0 /* Build configuration list for PBXNativeTarget "Eventy" */;
 			buildPhases = (
+				DEA094BA49791E3D01964E7A /* [CP] Check Pods Manifest.lock */,
+				B330F68D2A31ECFE00552DE9 /* ShellScript */,
 				B312CB832A31CE0C00F441C0 /* Sources */,
 				B312CB842A31CE0C00F441C0 /* Frameworks */,
 				B312CB852A31CE0C00F441C0 /* Resources */,
+				727023264669816BFDA39D95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Eventy;
-			packageProductDependencies = (
-				B312CB9A2A31D4D500F441C0 /* RswiftLibrary */,
-			);
 			productName = Eventy;
 			productReference = B312CB872A31CE0C00F441C0 /* Eventy.app */;
 			productType = "com.apple.product-type.application";
@@ -118,9 +243,6 @@
 				Base,
 			);
 			mainGroup = B312CB7E2A31CE0C00F441C0;
-			packageReferences = (
-				B312CB992A31D4D500F441C0 /* XCRemoteSwiftPackageReference "R.swift" */,
-			);
 			productRefGroup = B312CB882A31CE0C00F441C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +257,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B330F6AB2A322CDD00552DE9 /* Roboto-Italic.otf in Resources */,
+				B330F6B12A322CDD00552DE9 /* Roboto-Medium.otf in Resources */,
+				B330F6AF2A322CDD00552DE9 /* Roboto-LightItalic.otf in Resources */,
+				B330F6AA2A322CDD00552DE9 /* Roboto-BoldItalic.otf in Resources */,
+				B330F6AE2A322CDD00552DE9 /* Roboto-BlackItalic.otf in Resources */,
+				B330F6A82A322CDD00552DE9 /* Roboto-ThinItalic.otf in Resources */,
+				B330F6A92A322CDD00552DE9 /* Roboto-Light.otf in Resources */,
+				B330F6B32A322CDD00552DE9 /* Roboto-MediumItalic.otf in Resources */,
+				B330F6B22A322CDD00552DE9 /* Roboto-Black.otf in Resources */,
+				B330F68A2A31DEFA00552DE9 /* LaunchScreen.storyboard in Resources */,
+				B330F6AC2A322CDD00552DE9 /* Roboto-Bold.otf in Resources */,
+				B330F6932A31F1BD00552DE9 /* Localizable.strings in Resources */,
+				B330F6B02A322CDD00552DE9 /* Roboto-Thin.otf in Resources */,
+				B330F6AD2A322CDD00552DE9 /* Roboto-Regular.otf in Resources */,
 				B312CB922A31CE0D00F441C0 /* Preview Assets.xcassets in Resources */,
 				B312CB8F2A31CE0D00F441C0 /* Assets.xcassets in Resources */,
 			);
@@ -142,13 +278,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		727023264669816BFDA39D95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventy/Pods-Eventy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventy/Pods-Eventy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eventy/Pods-Eventy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B330F68D2A31ECFE00552DE9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Eventy/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Eventy/R.generated.swift\"\n";
+		};
+		DEA094BA49791E3D01964E7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eventy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B312CB832A31CE0C00F441C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B330F6992A3229A800552DE9 /* RoundedCorner.swift in Sources */,
+				B3BCBD092A3384E5008E0573 /* StrokeButton.swift in Sources */,
+				B3BCBD0B2A3385D3008E0573 /* ColorResource.swift in Sources */,
+				B330F6912A31F0EC00552DE9 /* TutorialScreen.swift in Sources */,
 				B312CB8D2A31CE0C00F441C0 /* ContentView.swift in Sources */,
+				B330F6B62A32329000552DE9 /* BaseButton.swift in Sources */,
 				B312CB8B2A31CE0C00F441C0 /* EventyApp.swift in Sources */,
+				B330F68F2A31EE3600552DE9 /* R.generated.swift in Sources */,
+				B326117F2A3483BB009860EC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +475,7 @@
 		};
 		B312CB962A31CE0D00F441C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D328155156CE78C883827224 /* Pods-Eventy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -281,11 +486,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Eventy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,14 +501,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.Eventy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B312CB972A31CE0D00F441C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10FD84CE45DCF1CCF16B4E4 /* Pods-Eventy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,11 +523,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Eventy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,9 +538,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.Eventy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -351,25 +569,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B312CB992A31D4D500F441C0 /* XCRemoteSwiftPackageReference "R.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B312CB9A2A31D4D500F441C0 /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B312CB992A31D4D500F441C0 /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = RswiftLibrary;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B312CB7F2A31CE0C00F441C0 /* Project object */;
 }

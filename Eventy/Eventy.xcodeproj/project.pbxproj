@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		058695C56AE428E3F8275CF3 /* Pods_Eventy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AF8BAC2FC89E7EF4A3D345 /* Pods_Eventy.framework */; };
 		B312CB8B2A31CE0C00F441C0 /* EventyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */; };
-		B312CB8D2A31CE0C00F441C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312CB8C2A31CE0C00F441C0 /* ContentView.swift */; };
 		B312CB8F2A31CE0D00F441C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */; };
 		B312CB922A31CE0D00F441C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312CB912A31CE0D00F441C0 /* Preview Assets.xcassets */; };
+		B316C6F82A388AD1003005D5 /* SpannableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316C6F72A388AD1003005D5 /* SpannableText.swift */; };
+		B316C6FA2A38D3F2003005D5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316C6F92A38D3F2003005D5 /* UINavigationController.swift */; };
+		B316C6FD2A399C63003005D5 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316C6FC2A399C63003005D5 /* Realm.swift */; };
+		B316C7022A3A1361003005D5 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316C7012A3A1361003005D5 /* Toast.swift */; };
+		B316C7042A3A1B02003005D5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316C7032A3A1B02003005D5 /* String.swift */; };
 		B326117F2A3483BB009860EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326117E2A3483BB009860EC /* Constants.swift */; };
+		B327861A2A35D0CB003363E6 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32786192A35D0CB003363E6 /* LeadingImageTextField.swift */; };
 		B330F68A2A31DEFA00552DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */; };
 		B330F68F2A31EE3600552DE9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F68E2A31EE3600552DE9 /* R.generated.swift */; };
 		B330F6912A31F0EC00552DE9 /* TutorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */; };
@@ -30,7 +35,14 @@
 		B330F6B12A322CDD00552DE9 /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A52A322CDD00552DE9 /* Roboto-Medium.otf */; };
 		B330F6B22A322CDD00552DE9 /* Roboto-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A62A322CDD00552DE9 /* Roboto-Black.otf */; };
 		B330F6B32A322CDD00552DE9 /* Roboto-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B330F6A72A322CDD00552DE9 /* Roboto-MediumItalic.otf */; };
-		B330F6B62A32329000552DE9 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6B52A32329000552DE9 /* BaseButton.swift */; };
+		B330F6B62A32329000552DE9 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330F6B52A32329000552DE9 /* DefaultButton.swift */; };
+		B336DEBF2A3848F40051404D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEBE2A3848F40051404D /* UserData.swift */; };
+		B336DEC12A385BB60051404D /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEC02A385BB60051404D /* SignUpScreen.swift */; };
+		B336DEC32A38618D0051404D /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEC22A38618D0051404D /* FloatingLabelTextField.swift */; };
+		B34B2E392A370F5E00BB3841 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E382A370F5E00BB3841 /* SignInScreen.swift */; };
+		B34B2E3B2A3721D200BB3841 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E3A2A3721D200BB3841 /* WelcomeScreen.swift */; };
+		B34B2E3D2A3725BA00BB3841 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E3C2A3725BA00BB3841 /* View.swift */; };
+		B34B2E402A3745AB00BB3841 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E3F2A3745AB00BB3841 /* CheckBox.swift */; };
 		B3BCBD092A3384E5008E0573 /* StrokeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCBD082A3384E5008E0573 /* StrokeButton.swift */; };
 		B3BCBD0B2A3385D3008E0573 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */; };
 /* End PBXBuildFile section */
@@ -39,11 +51,16 @@
 		54AF8BAC2FC89E7EF4A3D345 /* Pods_Eventy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B312CB872A31CE0C00F441C0 /* Eventy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventyApp.swift; sourceTree = "<group>"; };
-		B312CB8C2A31CE0C00F441C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B312CB912A31CE0D00F441C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B312CB982A31D10E00F441C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B316C6F72A388AD1003005D5 /* SpannableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpannableText.swift; sourceTree = "<group>"; };
+		B316C6F92A38D3F2003005D5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		B316C6FC2A399C63003005D5 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		B316C7012A3A1361003005D5 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		B316C7032A3A1B02003005D5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B326117E2A3483BB009860EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B32786192A35D0CB003363E6 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
 		B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B330F68E2A31EE3600552DE9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScreen.swift; sourceTree = "<group>"; };
@@ -61,7 +78,14 @@
 		B330F6A52A322CDD00552DE9 /* Roboto-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.otf"; sourceTree = "<group>"; };
 		B330F6A62A322CDD00552DE9 /* Roboto-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.otf"; sourceTree = "<group>"; };
 		B330F6A72A322CDD00552DE9 /* Roboto-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.otf"; sourceTree = "<group>"; };
-		B330F6B52A32329000552DE9 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		B330F6B52A32329000552DE9 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		B336DEBE2A3848F40051404D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B336DEC02A385BB60051404D /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		B336DEC22A38618D0051404D /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
+		B34B2E382A370F5E00BB3841 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		B34B2E3A2A3721D200BB3841 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		B34B2E3C2A3725BA00BB3841 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B34B2E3F2A3745AB00BB3841 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		B3BCBD082A3384E5008E0573 /* StrokeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeButton.swift; sourceTree = "<group>"; };
 		B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResource.swift; sourceTree = "<group>"; };
 		D328155156CE78C883827224 /* Pods-Eventy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventy.debug.xcconfig"; path = "Target Support Files/Pods-Eventy/Pods-Eventy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,17 +142,15 @@
 		B312CB892A31CE0C00F441C0 /* Eventy */ = {
 			isa = PBXGroup;
 			children = (
-				B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */,
-				B312CB8C2A31CE0C00F441C0 /* ContentView.swift */,
-				B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */,
-				B330F68E2A31EE3600552DE9 /* R.generated.swift */,
-				B330F6B42A32327F00552DE9 /* Base */,
+				B34B2E352A370EB400BB3841 /* Module */,
 				B330F6942A32293700552DE9 /* Utils */,
-				B312CB902A31CE0D00F441C0 /* Preview Content */,
+				B312CB8A2A31CE0C00F441C0 /* EventyApp.swift */,
+				B330F68E2A31EE3600552DE9 /* R.generated.swift */,
 				B330F6922A31F1BD00552DE9 /* Localizable.strings */,
 				B330F6892A31DEFA00552DE9 /* LaunchScreen.storyboard */,
 				B312CB982A31D10E00F441C0 /* Info.plist */,
 				B312CB8E2A31CE0D00F441C0 /* Assets.xcassets */,
+				B312CB902A31CE0D00F441C0 /* Preview Content */,
 			);
 			path = Eventy;
 			sourceTree = "<group>";
@@ -141,12 +163,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B316C6FB2A399C58003005D5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B316C6FC2A399C63003005D5 /* Realm.swift */,
+				B330F6982A3229A800552DE9 /* RoundedCorner.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B330F6942A32293700552DE9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B316C6FB2A399C58003005D5 /* Helper */,
+				B34B2E3E2A37445100BB3841 /* Views */,
 				B330F69A2A322CB700552DE9 /* Font */,
 				B330F6952A32293D00552DE9 /* Extensions */,
-				B330F6982A3229A800552DE9 /* RoundedCorner.swift */,
 				B326117E2A3483BB009860EC /* Constants.swift */,
 			);
 			path = Utils;
@@ -156,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				B3BCBD0A2A3385D3008E0573 /* ColorResource.swift */,
+				B34B2E3C2A3725BA00BB3841 /* View.swift */,
+				B316C6F92A38D3F2003005D5 /* UINavigationController.swift */,
+				B316C7032A3A1B02003005D5 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,13 +222,62 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
-		B330F6B42A32327F00552DE9 /* Base */ = {
+		B336DEBC2A3848B90051404D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B330F6B52A32329000552DE9 /* BaseButton.swift */,
-				B3BCBD082A3384E5008E0573 /* StrokeButton.swift */,
+				B336DEBE2A3848F40051404D /* UserData.swift */,
 			);
-			path = Base;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B336DEBD2A3848D00051404D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B34B2E382A370F5E00BB3841 /* SignInScreen.swift */,
+				B336DEC02A385BB60051404D /* SignUpScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B34B2E352A370EB400BB3841 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B34B2E372A370F2600BB3841 /* Authentication */,
+				B34B2E362A370EC500BB3841 /* Tutorial */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B34B2E362A370EC500BB3841 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B330F6902A31F0EC00552DE9 /* TutorialScreen.swift */,
+				B34B2E3A2A3721D200BB3841 /* WelcomeScreen.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		B34B2E372A370F2600BB3841 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B336DEBD2A3848D00051404D /* View */,
+				B336DEBC2A3848B90051404D /* Model */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		B34B2E3E2A37445100BB3841 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B330F6B52A32329000552DE9 /* DefaultButton.swift */,
+				B3BCBD082A3384E5008E0573 /* StrokeButton.swift */,
+				B32786192A35D0CB003363E6 /* LeadingImageTextField.swift */,
+				B34B2E3F2A3745AB00BB3841 /* CheckBox.swift */,
+				B336DEC22A38618D0051404D /* FloatingLabelTextField.swift */,
+				B316C6F72A388AD1003005D5 /* SpannableText.swift */,
+				B316C7012A3A1361003005D5 /* Toast.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,12 +430,24 @@
 			files = (
 				B330F6992A3229A800552DE9 /* RoundedCorner.swift in Sources */,
 				B3BCBD092A3384E5008E0573 /* StrokeButton.swift in Sources */,
+				B336DEBF2A3848F40051404D /* UserData.swift in Sources */,
+				B327861A2A35D0CB003363E6 /* LeadingImageTextField.swift in Sources */,
+				B336DEC32A38618D0051404D /* FloatingLabelTextField.swift in Sources */,
+				B316C6FD2A399C63003005D5 /* Realm.swift in Sources */,
+				B316C6F82A388AD1003005D5 /* SpannableText.swift in Sources */,
 				B3BCBD0B2A3385D3008E0573 /* ColorResource.swift in Sources */,
+				B336DEC12A385BB60051404D /* SignUpScreen.swift in Sources */,
 				B330F6912A31F0EC00552DE9 /* TutorialScreen.swift in Sources */,
-				B312CB8D2A31CE0C00F441C0 /* ContentView.swift in Sources */,
-				B330F6B62A32329000552DE9 /* BaseButton.swift in Sources */,
+				B330F6B62A32329000552DE9 /* DefaultButton.swift in Sources */,
 				B312CB8B2A31CE0C00F441C0 /* EventyApp.swift in Sources */,
+				B34B2E3B2A3721D200BB3841 /* WelcomeScreen.swift in Sources */,
+				B34B2E3D2A3725BA00BB3841 /* View.swift in Sources */,
 				B330F68F2A31EE3600552DE9 /* R.generated.swift in Sources */,
+				B34B2E392A370F5E00BB3841 /* SignInScreen.swift in Sources */,
+				B316C6FA2A38D3F2003005D5 /* UINavigationController.swift in Sources */,
+				B316C7022A3A1361003005D5 /* Toast.swift in Sources */,
+				B316C7042A3A1B02003005D5 /* String.swift in Sources */,
+				B34B2E402A3745AB00BB3841 /* CheckBox.swift in Sources */,
 				B326117F2A3483BB009860EC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +587,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -528,7 +624,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

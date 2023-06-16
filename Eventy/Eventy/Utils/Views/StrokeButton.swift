@@ -10,21 +10,23 @@ import SwiftUI
 struct StrokeButton: View {
     
     var text: String
-    var onClick: () -> Void = { }
+    var onClick: (() -> Void)? = nil
     
     var body: some View {
         VStack {
             Text(text)
-                .foregroundColor(AppColor.appBaseColor.color)
-                .font(.custom(AppFont.robotoBold, size: 18))
+                .foregroundColor(appColor.appBaseColor.color)
+                .font(.custom(appFont.robotoBold, size: 18))
                 .frame(maxWidth: .infinity)
                 .padding([.top, .bottom], 15)
                 .overlay(
                     RoundedRectangle(cornerRadius: 25)
-                        .stroke(AppColor.appBaseColor.color)
+                        .stroke(appColor.appBaseColor.color)
                 )
-                .onTapGesture {
-                    onClick()
+                .map(onClick) { onClick, view in
+                    view.onTapGesture {
+                        onClick()
+                    }
                 }
         }
     }
@@ -33,5 +35,6 @@ struct StrokeButton: View {
 struct StrokeButton_Previews: PreviewProvider {
     static var previews: some View {
         StrokeButton(text: "Stroke Button")
+            .previewLayout(.sizeThatFits)
     }
 }

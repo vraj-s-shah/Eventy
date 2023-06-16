@@ -41,7 +41,7 @@ struct SignInScreen: View {
                         focusedTextField = .password
                     }
                 
-                LeadingImageTextField(leadingImage: Image(appImage.passwordIcon), titleKey: appString.passwordPlaceholder(), text: $password)
+                LeadingImageTextField(leadingImage: Image(appImage.passwordIcon), titleKey: appString.passwordPlaceholder(), isPasswordTextField: true, text: $password)
                     .keyboardType(.asciiCapable)
                     .textInputAutocapitalization(.never)
                     .submitLabel(.done)

@@ -1,5 +1,5 @@
 //
-//  BaseButton.swift
+//  DefaultButton.swift
 //  Eventy
 //
 //  Created by Vraj Shah on 08/06/23.
@@ -7,22 +7,24 @@
 
 import SwiftUI
 
-struct BaseButton: View {
+struct DefaultButton: View {
     
     var text: String
-    var onClick: () -> Void = { }
+    var onClick: (() -> Void)? = nil
     
     var body: some View {
         VStack {
             Text(text)
                 .foregroundColor(.white)
-                .font(.custom(AppFont.robotoBold, size: 18))
+                .font(.custom(appFont.robotoBold, size: 18))
                 .frame(maxWidth: .infinity)
                 .padding([.top, .bottom], 15)
-                .background(AppColor.appBaseColor.color)
+                .background(appColor.appBaseColor.color)
                 .cornerRadius(25)
-                .onTapGesture {
-                    onClick()
+                .map(onClick) { onClick, view in
+                    view.onTapGesture {
+                        onClick()
+                    }
                 }
         }
     }
@@ -30,6 +32,7 @@ struct BaseButton: View {
 
 struct BaseButton_Previews: PreviewProvider {
     static var previews: some View {
-        BaseButton(text: "Base Button")
+        DefaultButton(text: "Base Button")
+            .previewLayout(.sizeThatFits)
     }
 }

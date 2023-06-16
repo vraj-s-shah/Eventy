@@ -14,3 +14,27 @@ findAndBookAEventDescription = "Find the Best event near you \nwith just one of 
 organizedAPremiumEventDescription = "Find the Best event near you \nwith just one of best app";
 getStarted = "Get Started";
 registerByNo = "Register by No";
+signInTitle = "Sign in";
+rememberMe = "Remember me";
+forgotPassword = "Forget password?";
+dontHaveAnAccount = "Don’t have an account?";
+signUpAttributed = "Sign Up";
+emailPlaceholder = "Email";
+passwordPlaceholder = "Password";
+signUpTitle = "Sign up";
+fullName = "Full name";
+phoneNumber = "Phone Number";
+email = "Email";
+password = "Password";
+confirmPassword = "Confirm Password";
+termsOfServiceAndPrivacyPolicy = "By creating an account you agree to \nour Terms of Service and Privacy Policy";
+alreadyHaveAnAccount = "Already have an account?";
+signInAttributed = "Sign in !";
+termsNotChecked = "Please check terms and conditions";
+userNotFound = "User not found";
+wrongPassword = "Wrong password";
+
+// User default keys
+isTutorialCompleted = "isTutorialCompleted";
+isLoggedIn = "isLoggedIn";
+rememberedEmail = "rememberedEmail";

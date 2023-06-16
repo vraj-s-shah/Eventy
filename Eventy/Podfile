@@ -8,4 +8,5 @@ target 'Eventy' do
   # Pods for Eventy
   pod 'R.swift'
   pod 'SwiftUIPager'
+  pod 'RealmSwift'
 end

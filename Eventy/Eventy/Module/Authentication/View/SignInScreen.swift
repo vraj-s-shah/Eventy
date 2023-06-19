@@ -10,21 +10,15 @@ import RealmSwift
 
 struct SignInScreen: View {
     
+    var isNavigatedFromSignUp: Bool = false
+
     @Environment(\.dismiss) var dismiss: DismissAction
-    
-    @AppStorage(appString.isLoggedIn()) private var isLoggedIn: Bool = false
-    @AppStorage(appString.rememberedEmail()) private var rememberedEmail: String = ""
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var isRememberMeChecked: Bool = false
-    @State private var shouldNavigateToSignUp: Bool = false
-    @State private var shouldShowErrorToast: Bool = false
-    @State private var credentialsError: String?
-    
+    @ObservedObject private var viewModel = SignInViewModel()
     @FocusState private var focusedTextField: TextField?
     
-    var isNavigatedFromSignUp: Bool = false
+    private enum TextField {
+        case email, password
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -32,7 +26,7 @@ struct SignInScreen: View {
                 .frame(height: 44)
             
             VStack(spacing: 20) {
-                LeadingImageTextField(leadingImage: Image(appImage.mailIcon), titleKey: appString.emailPlaceholder(), text: $email)
+                LeadingImageTextField(leadingImage: Image(appImage.mailIcon), titleKey: appString.emailPlaceholder(), text: $viewModel.email)
                     .keyboardType(.emailAddress)
                     .textInputAutocapitalization(.never)
                     .submitLabel(.next)
@@ -41,14 +35,14 @@ struct SignInScreen: View {
                         focusedTextField = .password
                     }
                 
-                LeadingImageTextField(leadingImage: Image(appImage.passwordIcon), titleKey: appString.passwordPlaceholder(), isPasswordTextField: true, text: $password)
+                LeadingImageTextField(leadingImage: Image(appImage.passwordIcon), titleKey: appString.passwordPlaceholder(), isPasswordTextField: true, text: $viewModel.password)
                     .keyboardType(.asciiCapable)
                     .textInputAutocapitalization(.never)
                     .submitLabel(.done)
                     .focused($focusedTextField, equals: .password)
                 
                 HStack(alignment: .center) {
-                    CheckBox(isChecked: $isRememberMeChecked) {
+                    CheckBox(isChecked: $viewModel.isRememberMeChecked) {
                         Text(appString.rememberMe)
                             .padding(.leading, 8)
                             .font(.custom(appFont.robotoRegular, size: 14))
@@ -72,7 +66,7 @@ struct SignInScreen: View {
             .padding(.horizontal, 17)
             
             DefaultButton(text: appString.signInTitle()) {
-                checkAndSignIn()
+                viewModel.checkAndSignIn()
             }
             .padding(.horizontal, 20)
             .padding(.top, 30)
@@ -86,11 +80,7 @@ struct SignInScreen: View {
                     .font(.custom(appFont.robotoBold, size: 16))
                     .foregroundColor(appColor.appBaseColor.color)
                     .onTapGesture {
-                        if isNavigatedFromSignUp {
-                            dismiss()
-                        } else {
-                            shouldNavigateToSignUp = true
-                        }
+                        isNavigatedFromSignUp ? dismiss() : viewModel.setShouldNavigateToSignUp(true)
                     }
             }
             .padding(.top, 21)
@@ -102,67 +92,20 @@ struct SignInScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(appColor.appGrayColor.color)
-        .navigationDestination(isPresented: $shouldNavigateToSignUp) {
+        .navigationDestination(isPresented: $viewModel.shouldNavigateToSignUp) {
             SignUpScreen(isNavigatedFromSignIn: true)
         }
         .onTapGesture { focusedTextField = nil }
         .overlay(content: {
-            if shouldShowErrorToast {
-                Toast(message: credentialsError ?? "",
+            if viewModel.shouldShowToast {
+                Toast(message: viewModel.toastMessage ?? "",
                       backgroundColor: .red,
                       textColor: .white,
-                      shouldShowToast: $shouldShowErrorToast)
+                      shouldShowToast: $viewModel.shouldShowToast)
             }
         })
     }
 }
-
-extension SignInScreen {
-    
-    private enum TextField {
-        case email, password
-    }
-    
-    private enum CredentialsError: String {
-        case emptyCredentials = "All fields required"
-        case invalidEmail = "Invalid email address"
-    }
-    
-    private func checkAndSignIn() {
-        if let credentialsError = validateCredentials() {
-            self.credentialsError = credentialsError.rawValue
-            withAnimation { shouldShowErrorToast = true }
-            return
-        }
-        guard let userData: UserData = realmHelper.getFirst(UserData.emailPredicate, email) else {
-            self.credentialsError = appString.userNotFound()
-            withAnimation { shouldShowErrorToast = true }
-            return
-        }
-        if userData.password != password {
-            credentialsError = appString.wrongPassword()
-            withAnimation { shouldShowErrorToast = true }
-        } else {
-            isLoggedIn = true
-            rememberedEmail = isRememberMeChecked ? email : ""
-            //TODO: Navigate to home screen
-            credentialsError = "Login Success"
-            withAnimation { shouldShowErrorToast = true }
-        }
-    }
-    
-    private func validateCredentials() -> CredentialsError? {
-        switch true {
-        case email.isEmpty, password.isEmpty:
-            return .emptyCredentials
-        case !email.isValidEmail:
-            return .invalidEmail
-        default:
-            return nil
-        }
-    }
-    
-}//End of extension
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

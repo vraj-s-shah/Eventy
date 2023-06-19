@@ -11,30 +11,12 @@ struct SignUpScreen: View {
     
     var isNavigatedFromSignIn: Bool = false
     
-    @AppStorage(appString.isLoggedIn()) private var isLoggedIn: Bool = false
-    @AppStorage(appString.rememberedEmail()) private var rememberedEmail: String = ""
-    
-    @Environment(\.dismiss) var dismiss: DismissAction
-    
-    @State private var fullName: String = ""
-    @State private var phoneNumber: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-    @State private var isTermsChecked: Bool = false
-    @State private var shouldNavigateToSignIn: Bool = false
-    @State private var shouldShowErrorToast: Bool = false
-    @State private var credentialsError: String?
-    
+    @Environment(\.dismiss) private var dismiss: DismissAction
+    @ObservedObject private var viewModel = SignUpViewModel()
     @FocusState private var focusedTextField: TextField?
     
-    private var userData: UserData {
-        let userData = UserData()
-        userData.fullname = fullName
-        userData.phoneNumber = phoneNumber
-        userData.email = email
-        userData.password = password
-        return userData
+    private enum TextField {
+        case fullName, phoneNumber, email, password, confirmPassword
     }
     
     var body: some View {
@@ -48,7 +30,7 @@ struct SignUpScreen: View {
                     .background(appColor.appGrayColor.color)
                     .clipShape(Circle())
                     
-                    FloatingLabelTextField(titleKey: appString.fullName(), text: $fullName)
+                    FloatingLabelTextField(titleKey: appString.fullName(), text: $viewModel.fullName)
                         .padding(.top, 20)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.asciiCapable)
@@ -58,7 +40,7 @@ struct SignUpScreen: View {
                             focusedTextField = .phoneNumber
                         }
                     
-                    FloatingLabelTextField(titleKey: appString.phoneNumber(), text: $phoneNumber)
+                    FloatingLabelTextField(titleKey: appString.phoneNumber(), text: $viewModel.phoneNumber)
                         .padding(.top, 15)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.asciiCapableNumberPad)
@@ -68,7 +50,7 @@ struct SignUpScreen: View {
                             focusedTextField = .email
                         }
                     
-                    FloatingLabelTextField(titleKey: appString.email(), text: $email)
+                    FloatingLabelTextField(titleKey: appString.email(), text: $viewModel.email)
                         .padding(.top, 15)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.emailAddress)
@@ -80,7 +62,7 @@ struct SignUpScreen: View {
                     
                     FloatingLabelTextField(titleKey: appString.password(),
                                            isPasswordTextField: true,
-                                           text: $password)
+                                           text: $viewModel.password)
                     .padding(.top, 15)
                     .textInputAutocapitalization(.never)
                     .keyboardType(.asciiCapable)
@@ -92,14 +74,14 @@ struct SignUpScreen: View {
                     
                     FloatingLabelTextField(titleKey: appString.confirmPassword(),
                                            isPasswordTextField: true,
-                                           text: $confirmPassword)
+                                           text: $viewModel.confirmPassword)
                     .padding(.top, 15)
                     .textInputAutocapitalization(.never)
                     .keyboardType(.asciiCapable)
                     .focused($focusedTextField, equals: .confirmPassword)
                     .submitLabel(.done)
                     
-                    CheckBox(isChecked: $isTermsChecked) {
+                    CheckBox(isChecked: $viewModel.isTermsChecked) {
                         Text(appString.termsOfServiceAndPrivacyPolicy)
                             .font(.custom(appFont.robotoRegular, size: 16))
                             .foregroundColor(appColor.appTextColor.color)
@@ -108,7 +90,7 @@ struct SignUpScreen: View {
                     .padding(.top, 28)
                     
                     DefaultButton(text: appString.signUpTitle()) {
-                        checkAndSignUp()
+                        viewModel.checkAndSignUp()
                     }
                     .padding(.top, 24)
                     
@@ -121,11 +103,7 @@ struct SignUpScreen: View {
                             .font(.custom(appFont.robotoBold, size: 16))
                             .foregroundColor(appColor.appBaseColor.color)
                             .onTapGesture {
-                                if isNavigatedFromSignIn {
-                                    dismiss()
-                                } else {
-                                    shouldNavigateToSignIn = true
-                                }
+                                isNavigatedFromSignIn ? dismiss() : viewModel.setShouldNavigateToSignIn(true)
                             }
                     }
                     .padding(.top, 21)
@@ -149,66 +127,20 @@ struct SignUpScreen: View {
         .background(appColor.appGrayColor.color)
         .scrollDismissesKeyboard(.interactively)
         .scrollBounceBehavior(.basedOnSize)
-        .navigationDestination(isPresented: $shouldNavigateToSignIn) {
+        .navigationDestination(isPresented: $viewModel.shouldNavigateToSignIn) {
             SignInScreen(isNavigatedFromSignUp: true)
         }
         .onTapGesture { focusedTextField = nil }
         .overlay(content: {
-            if shouldShowErrorToast {
-                Toast(message: credentialsError ?? "",
+            if viewModel.shouldShowToast {
+                Toast(message: viewModel.toastMessage ?? "",
                       backgroundColor: .red,
                       textColor: .white,
-                      shouldShowToast: $shouldShowErrorToast)
+                      shouldShowToast: $viewModel.shouldShowToast)
             }
         })
     }
 }
-
-extension SignUpScreen {
-    
-    private enum TextField {
-        case fullName, phoneNumber, email, password, confirmPassword
-    }
-    
-    private enum CredentialsError: String {
-        case emptyCredentials = "All fields required"
-        case invalidEmail = "Invalid email address"
-        case invalidPhone = "Invalid phone number"
-        case passwordNotMatching = "Password does not match"
-    }
-    
-    private func checkAndSignUp() {
-        if let credentialsError = validateCredentials() {
-            self.credentialsError = credentialsError.rawValue
-            withAnimation { shouldShowErrorToast = true }
-        } else if !isTermsChecked {
-            credentialsError = appString.termsNotChecked()
-            withAnimation { shouldShowErrorToast = true }
-        } else {
-            realmHelper.set(object: userData)
-            isLoggedIn = true
-            rememberedEmail = email
-            credentialsError = "Signup success"
-            withAnimation { shouldShowErrorToast = true }
-        }
-    }
-    
-    private func validateCredentials() -> CredentialsError? {
-        switch true {
-        case fullName.isEmpty, phoneNumber.isEmpty, email.isEmpty, password.isEmpty, confirmPassword.isEmpty:
-            return .emptyCredentials
-        case !email.isValidEmail:
-            return .invalidEmail
-        case phoneNumber.count != 10:
-            return .invalidPhone
-        case password != confirmPassword:
-            return .passwordNotMatching
-        default:
-            return nil
-        }
-    }
-    
-}//End of extension
 
 struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {

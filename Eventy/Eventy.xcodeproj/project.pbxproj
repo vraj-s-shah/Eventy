@@ -39,6 +39,9 @@
 		B336DEBF2A3848F40051404D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEBE2A3848F40051404D /* UserData.swift */; };
 		B336DEC12A385BB60051404D /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEC02A385BB60051404D /* SignUpScreen.swift */; };
 		B336DEC32A38618D0051404D /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B336DEC22A38618D0051404D /* FloatingLabelTextField.swift */; };
+		B34308B32A3DD90F00CD097B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34308B22A3DD90F00CD097B /* SignInViewModel.swift */; };
+		B34308B52A3DE00E00CD097B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34308B42A3DE00E00CD097B /* SignUpViewModel.swift */; };
+		B34308B72A3DE83800CD097B /* BaseObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34308B62A3DE83800CD097B /* BaseObservableObject.swift */; };
 		B34B2E392A370F5E00BB3841 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E382A370F5E00BB3841 /* SignInScreen.swift */; };
 		B34B2E3B2A3721D200BB3841 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E3A2A3721D200BB3841 /* WelcomeScreen.swift */; };
 		B34B2E3D2A3725BA00BB3841 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B2E3C2A3725BA00BB3841 /* View.swift */; };
@@ -82,6 +85,9 @@
 		B336DEBE2A3848F40051404D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B336DEC02A385BB60051404D /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		B336DEC22A38618D0051404D /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
+		B34308B22A3DD90F00CD097B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		B34308B42A3DE00E00CD097B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		B34308B62A3DE83800CD097B /* BaseObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObservableObject.swift; sourceTree = "<group>"; };
 		B34B2E382A370F5E00BB3841 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		B34B2E3A2A3721D200BB3841 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		B34B2E3C2A3725BA00BB3841 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 			children = (
 				B316C6FC2A399C63003005D5 /* Realm.swift */,
 				B330F6982A3229A800552DE9 /* RoundedCorner.swift */,
+				B34308B62A3DE83800CD097B /* BaseObservableObject.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -239,6 +246,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B34308B12A3DD8F400CD097B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B34308B22A3DD90F00CD097B /* SignInViewModel.swift */,
+				B34308B42A3DE00E00CD097B /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B34B2E352A370EB400BB3841 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +278,7 @@
 			children = (
 				B336DEBD2A3848D00051404D /* View */,
 				B336DEBC2A3848B90051404D /* Model */,
+				B34308B12A3DD8F400CD097B /* ViewModel */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -440,6 +457,9 @@
 				B330F6912A31F0EC00552DE9 /* TutorialScreen.swift in Sources */,
 				B330F6B62A32329000552DE9 /* DefaultButton.swift in Sources */,
 				B312CB8B2A31CE0C00F441C0 /* EventyApp.swift in Sources */,
+				B34308B72A3DE83800CD097B /* BaseObservableObject.swift in Sources */,
+				B34308B32A3DD90F00CD097B /* SignInViewModel.swift in Sources */,
+				B34308B52A3DE00E00CD097B /* SignUpViewModel.swift in Sources */,
 				B34B2E3B2A3721D200BB3841 /* WelcomeScreen.swift in Sources */,
 				B34B2E3D2A3725BA00BB3841 /* View.swift in Sources */,
 				B330F68F2A31EE3600552DE9 /* R.generated.swift in Sources */,

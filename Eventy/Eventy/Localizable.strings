@@ -38,3 +38,9 @@ wrongPassword = "Wrong password";
 isTutorialCompleted = "isTutorialCompleted";
 isLoggedIn = "isLoggedIn";
 rememberedEmail = "rememberedEmail";
+
+// Credentials error message
+allFieldsRequired = "All fields required";
+invalidEmailAddress = "Invalid email address";
+invalidPhoneNumber = "Invalid phone number";
+passwordNotMatching = "Password does not match";

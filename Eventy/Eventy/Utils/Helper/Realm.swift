@@ -28,6 +28,7 @@ class RealmHelper {
     init() {
         do {
             realm = try Realm()
+            debugPrint("Realm file url: ", realm?.configuration.fileURL?.absoluteString ?? "")
         } catch {
             realm = nil
             debugPrint("Cannot create real instance: ", error.localizedDescription)

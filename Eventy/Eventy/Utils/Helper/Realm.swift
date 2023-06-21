@@ -9,11 +9,6 @@ import RealmSwift
 
 let realmHelper = RealmHelper.shared
 
-/**
- * Simulator realm file url:
- * 14 Pro max -
- * /Users/vraj/Library/Developer/CoreSimulator/Devices/0B1BD0EC-0F70-49E1-96EA-F4D258505A60/data/Containers/Data/Application/270141F0-7A45-4C81-A977-190EDD45CA53/Documents/
- */
 class RealmHelper {
     
     //MARK: -

@@ -139,6 +139,9 @@ struct SignUpScreen: View {
                       shouldShowToast: $viewModel.shouldShowToast)
             }
         })
+        .navigationDestination(isPresented: $viewModel.isLoggedIn) {
+            HomeScreen()
+        }
     }
 }
 

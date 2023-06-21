@@ -64,4 +64,11 @@ extension View {
             }
     }
     
+    /// Save the size provided view in `size` variable passed
+    /// - Parameter size: variable to store size in
+    /// - Returns: original view without any modification
+    func saveSize(in size: Binding<CGSize>) -> some View {
+        modifier(SizeCalculator(size: size))
+    }
+    
 }//End of extension

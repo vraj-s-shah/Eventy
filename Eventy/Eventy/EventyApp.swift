@@ -18,7 +18,7 @@ struct EventyApp: App {
             NavigationStack {
                 if isTutorialCompleted {
                     if isLoggedIn {
-                        //TODO: Add home screen
+                        HomeScreen()
                     } else {
                         WelcomeScreen()
                     }

@@ -14,10 +14,18 @@ class SignInViewModel: BaseObservableObject {
     
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var isRememberMeChecked: Bool = false
+    @Published var isRememberMeChecked: Bool = true
     @Published var shouldNavigateToSignUp: Bool = false
     @Published var shouldShowToast: Bool = false
     @Published var toastMessage: String?
+    
+    //MARK: -
+    //MARK: - Initialization
+    
+    override init() {
+        super.init()
+        email = rememberedEmail
+    }
 
     //MARK: -
     //MARK: - Public functions
@@ -37,8 +45,8 @@ class SignInViewModel: BaseObservableObject {
             } else {
                 isLoggedIn = true
                 rememberedEmail = isRememberMeChecked ? email : ""
-                //TODO: Navigate to home screen
-                showToast(message: "Login Success")
+                email = rememberedEmail
+                password = ""
             }
         } else {
             showToast(message: appString.userNotFound())

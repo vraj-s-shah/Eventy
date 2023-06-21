@@ -49,7 +49,12 @@ class SignUpViewModel: BaseObservableObject {
             realmHelper.set(object: userData)
             isLoggedIn = true
             rememberedEmail = email
-            showToast(message: "Signup success")
+            fullName = ""
+            email = ""
+            phoneNumber = ""
+            password = ""
+            confirmPassword = ""
+            isTermsChecked = false
         }
     }
     
